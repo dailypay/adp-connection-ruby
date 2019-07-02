@@ -39,7 +39,7 @@ module Adp
             :state => self.state
         )
 
-        Log.debug("URL was #{url}")
+        # Log.debug("URL was #{url}")
         return url
       end
 
@@ -69,7 +69,7 @@ module Adp
           end
         end
 
-        Log.debug("connection configutration: #{self.connection_configuration.inspect}")
+        # Log.debug("connection configutration: #{self.connection_configuration.inspect}")
 
         data = {
             "client_id" => self.connection_configuration.clientID,
@@ -88,7 +88,7 @@ module Adp
           raise ConnectionException, "Connection error: #{result["error"]} #{result['error_description']}"
         end
 
-        Log.debug("Results from request was #{result}");
+        # Log.debug("Results from request was #{result}");
 
         token
       end
